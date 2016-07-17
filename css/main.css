@@ -1,0 +1,96 @@
+/*
+The CSS code gets to executed from top to bottom and left ro right
+Basic rules to write CSS
+- write GENERAL rules first (for all the paragraph tags in the website for example) and only after that write CSS for SPECIFIC tags (for example the paragraph tags inside the footer)
+- write the css styles to define for the parent (outside) container and THEN the children (inside containers) of that parent and THEN the children (inside containers) of the child above
+*/
+
+
+/* CSS reset
+(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+/* General styles (General Module, wrapping around the modules bellow)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-color: white;
+    margin-top: 110px;
+    padding-left: 100px;
+    min-width: 1200px;
+    min-height: height: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+.ryu {
+    width: 659px;
+    height: 494px;
+}
+
+.ryu-ready,
+.ryu-still,
+.ryu-throwing {
+    width: 659px;
+    height: 494px;
+}
+
+.ryu-ready,
+.ryu-throwing {
+    display: none;
+}
+
+.ryu-still {
+    background-image: url(../images/ryu-standing-still.png);
+}
+
+.ryu-ready {
+    background-image: url(../images/ryu-ready-position.gif);
+}
+
+.ryu-throwing {
+    background-image: url(../images/ryu-throwing-hadouken.png);
+}
+
+.hadouken,
+.ryu-ready,
+.ryu-still,
+ryu-throwing {
+    background-repeat: no-repeat;
+}
+
+.hadouken {
+    background-image: url(../images/hadouken.gif);
+    width: 156px;
+    height: 90px;
+    display: none;
+    float: left;
+    position: absolute;
+    z-index: 10;
+    top: 280px;
+    left: 580px;
+}
